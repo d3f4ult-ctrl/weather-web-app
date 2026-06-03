@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather VIBES</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+    <canvas id="confetti"></canvas>
+    <div class="toggle-sound" onclick="toggleSound()" role="button" aria-label="Toggle sound">🔊</div>
+
+    <div class="container">
+        <div class="card">
+            <h1>Weather VIBES</h1>
+            <p class="subtitle">Get the weather but make it aesthetic</p>
+
+            <input type="text" id="city-input" placeholder="Type any city...">
+            <button onclick="getWeatherByCity()">Search</button>
+            <button onclick="getWeatherByLocation()"> Near Me</button>
+
+            <div class="current"></div>
+        </div>
+
+        <div class="card" id="forecastCard" style="display: none;">
+            <h2>5-Day Forecast</h2>
+            <div class="forecast" id="forecast"></div>
+        </div>
+    </div>
+
+    <script src="src/confetti.fixed.js"></script>
+    <script src="src/app.js"></script>
+
+</body>
+</html>
